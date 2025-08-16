@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+/* Optional: a couple of sane base tweaks */
+@layer base {
+  html, body, #root {
+    height: 100%;
+  }
+  /* Let Tailwind control fonts/colors instead of the Vite defaults */
+  body {
+    margin: 0;
+  }
+}
