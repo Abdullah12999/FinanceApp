@@ -40,7 +40,8 @@ export default function Auth() {
       }
       const data = await res.json();
       localStorage.setItem("gl_token", data.access_token);
-      navigate("/dashboard");
+      // FIXED: Navigate to splash page to show the GreenLedger animation
+      navigate("/splash");
     } catch (e: any) {
       toast({ title: "Login failed", description: e?.message || String(e) });
     }
@@ -72,7 +73,7 @@ export default function Auth() {
 
   return (
     <div className="min-h-screen animated-gradient bg-[radial-gradient(40rem_40rem_at_50%_-10%,hsl(var(--primary)/.18)_0%,transparent_60%)]">
-      
+
       <div className="container mx-auto px-4 pt-28 pb-12">
         <div className="max-w-md mx-auto">
           <Card className="shadow-lg">
@@ -127,5 +128,3 @@ export default function Auth() {
     </div>
   );
 }
-
-
